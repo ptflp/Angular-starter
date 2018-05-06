@@ -12,6 +12,14 @@
 	<label for="name">name</label>
 	<input type="text" ng-model="name" placeholder="Enter name" name="name">
 	<p>Hello {{name}} </p>
+	<hr>
+	<h2>3. Directives</h2>
+	<div ng-app="" ng-init="celsius=0,diff=32">
+		<p>Celsius:
+			<input type="text" ng-model="celsius">
+			<p>Fanhreneit: {{celsius*1.8+diff}}</p>
+		</p>
+	</div>
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
