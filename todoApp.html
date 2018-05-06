@@ -25,15 +25,15 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script type="text/javascript">
-	var app= angular.module('todoApp', []);
-	app.controller('todoList',function($scope){
-		$scope.todos=[{text:"Learn AngularJS",done: true},
-		{text:"build ana AngularJS app",done:false}];
-		$scope.addTodo=function(){
-			event.preventDefault();
-			if ($scope.todoText !== '') {
-				$scope.todos.push({text:$scope.todoText,done:false});
-				$scope.todoText ='';
+	var app= angular.module('todoApp', []); // App init
+	app.controller('todoList',function($scope){ //Controller registration
+		// Todo elements array
+		$scope.todos=[{text:"Learn AngularJS",done: true},{text:"build ana AngularJS app",done:false}];
+		$scope.addTodo=function(){ //function on submit handler
+			event.preventDefault(); // fixing reload page
+			if ($scope.todoText !== '') { 
+				$scope.todos.push({text:$scope.todoText,done:false}); //Adding element from input to Array
+				$scope.todoText =''; //clear for new entry
 			}
 		}
 	})
