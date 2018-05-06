@@ -1,0 +1,7 @@
+.done-true {
+	color : grey;
+	text-decoration: line-through;
+}
+ul li {	
+	list-style-type: none;
+}
