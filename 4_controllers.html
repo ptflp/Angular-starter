@@ -4,11 +4,14 @@
 	<meta charset="UTF-8">
 	<title>2</title>
 </head>
-<body>	
+<body>
 	<div ng-app="myApp">
+		<h2>4. Controllers</h2>
 		<div ng-controller="myController">
 			{{message}}
 		</div>
+		<hr>
+		<h2>5. Events</h2>
         <div ng-controller="clickCounter">
         	<button ng-click="count=count+1">Click me!</button>
         	<p> {{count}} </p>
@@ -17,10 +20,13 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script type="text/javascript">
+	// app init
 	var ngApp = angular.module('myApp', []);
+	// 4. Testing Controllers
     ngApp.controller('myController', function ($scope) {
         $scope.message = "Hello World!";
     });
+    // 5. Click events
     ngApp.controller('clickCounter', function($scope){
     	$scope.count = 0;
     })
