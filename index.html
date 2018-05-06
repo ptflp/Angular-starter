@@ -14,18 +14,18 @@
 	<p>Hello {{name}} </p>
 	<hr>
 	<h2>3. Directives</h2>
-	<div ng-app="" ng-init="celsius=0,diff=32">
+	<div ng-app ng-init="diff=32;celsius=0">
 		<p>Celsius:
 			<input type="text" ng-model="celsius">
 			<p>Fanhreneit: {{celsius*1.8+diff}}</p>
 		</p>
 	</div>
-	<div ng-app="" ng-init="students=['David','Steve','Bob','Ken','Dulus','Kolyan','Vovan']">
+	<div ng-app ng-init="students=['David','Steve','Bob','Ken','Dulus','Kolyan','Vovan']">
 		<ol>
 			<li ng-repeat="name in students">{{name}}</li>
 		</ol>
 	</div>
-
+	<hr>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 </html>
